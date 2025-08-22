@@ -1,0 +1,213 @@
+/* Body and Fonts */
+body {
+    margin: 0;
+    background-color: #FDEDEC;  /* soft medical pink */
+    color: #2C3E50;             /* deep navy */
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+span {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    color: #2C3E50;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid #d6336c;
+    backdrop-filter: blur(12px) saturate(160%);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 10px rgba(214, 51, 108, 0.15);
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 15px rgba(214, 51, 108, 0.25);
+}
+
+.navbar-brand {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d6336c !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.navbar-brand img {
+    width: 38px;
+}
+
+.nav-link {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #d6336c !important;
+    margin: 0 12px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #d6336c;
+    transition: width 0.3s ease-in-out;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+/* Content Sections */
+.one, .two {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.one-sub-one, .two-sub-two {
+    flex: 1;
+}
+.one-sub-two, .two-sub-one {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Video styling */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+}
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0;
+}
+
+/* Title Image Animation */
+.title-image {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Buttons */
+.get-started-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.get-started {
+    background: #d6336c;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+    color: white;
+}
+.get-started:hover {
+    background: #9b1a4d;
+}
+
+/* Good Luck Section */
+.good-luck p {
+    text-align: center;
+    font-weight: 700;
+    color: #d6336c;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    background: #fff;
+    border-top: 2px solid #d6336c;
+    text-align: center;
+}
+.footer-icon {
+    margin: 0 12px;
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+.footer-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .one, .two {
+        flex-direction: column;
+        text-align: center;
+    }
+    .video-wrapper {
+        margin-top: 1.5rem;
+    }
+    .vignesh {
+        padding-top: 160px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .get-started-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1rem; }
+    span { font-size: 0.95rem; }
+    .navbar-brand { font-size: 1.2rem; }
+    .nav-bar-image { width: 25px; }
+    .vignesh { padding-top: 180px; padding-left: 1.5rem; padding-right: 1.5rem; }
+    br { display: none; }
+    .one-sub-one, .two-sub-two { width: 100%; }
+    .one-sub-two, .two-sub-one { width: 0; display: none; }
+    .good-luck { padding-top: 3rem; }
+}
