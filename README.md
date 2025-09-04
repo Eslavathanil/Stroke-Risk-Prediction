@@ -6,7 +6,6 @@ Take this quiz to figure out if you are prone to stroke or not!
 [Click here to view the live demo](https://web-production-c994.up.railway.app/)
 
 ## 🖥️ Webpage Preview  
-
 ### 🏠 Home Page  
 The home page provides an introduction and instructions for the stroke risk quiz.  
 
